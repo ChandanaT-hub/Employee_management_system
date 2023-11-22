@@ -6,9 +6,21 @@
 
     <title>Removing a book</title>
 </head>
+<style>
+        body{
+        background-image:url("https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTZ8fHxlbnwwfHx8fHw%3D");
+        background-repeat:no-repeat;
+        background-size:100% 500%;
+        }
+    </style>
 <body>
 <div class="container">
 <h1 align="center">TO REMOVE A BOOK</h1><br><hr>
+    <form action="/remove_book" method="post">
+          {% csrf_token %}
+    <label for="b_name"><b>Book name</b></label><br>
+     <input type="text" name="b_name" id="b_name" value="{{b_name}}"><br><br>
+      <button type="submit" class="btn btn-primary">Submit</button>
  </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
